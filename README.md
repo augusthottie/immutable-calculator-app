@@ -89,10 +89,11 @@ import passportInstance from "./baseConfig.js";
   const [idToken, setIdToken] = useState('')
   const [userNickname, setUserNickname] = useState('')
 
-<button class="Immutable-button"
+<button className="Immutable-button"
+       disabled={loading}
        onClick={async () => {
+        setLoading(true);
          console.log("Hottie isn't too hot. She is ") //sanity check xD
-
          const provider = passportInstance.connectEvm();
          const accounts = await provider.request({ method: "eth_requestAccounts" });
          const personAddress = accounts[0] // ['0x...']
@@ -119,9 +120,9 @@ import passportInstance from "./baseConfig.js";
          console.log({nickname})
          console.log({idTokenValue})
          console.log({accessTokenValue})
-         
+         setLoading(false);
        }}
-     > Connect Passport</button>
+     >{!loading && 'Connect Passport'}{loading && 'Logging in...'}  </button>
 ```
 **Here is a breakdown of what the code is doing:**
 - When the button is clicked, it first logs a message to the console for debugging.
@@ -263,3 +264,5 @@ Congratulations! You've successfully integrated Immutable Passport into your Rea
 - **Keep Your Credentials Secure:** Ensure that your Immutable Passport credentials, such as the Client ID, are kept secure. Never expose them in your source code or public repositories.
 - **Explore Further:** Immutable Passport offers various features and capabilities. Explore the official documentation to discover more ways to enhance your application. [Immutable Doc](https://docs.immutable.com/docs/zkEVM/overview)
 - **Leverage Community Support:** If you run into challenges or have questions, don't hesitate to reach out to the community for support. Forums, chat channels, and online communities can be valuable resources. [Immutable Discord](https://discord.gg/c94zxHCv)
+
+**View my Live Application:** [Immutable Calculator App](https://immutable-calculator-app.netlify.app/)
