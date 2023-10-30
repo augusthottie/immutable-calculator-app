@@ -1,0 +1,126 @@
+:root {
+ --white: #fefffe;
+ --lavender-web: #e9ebf8;
+ --french-gray: #b4b8c5;
+ --silver: #a5a299;
+ --taupe-gray: #8d818c;
+}
+
+.main {
+ background: linear-gradient(45deg, var(--silver) 30%, var(--french-gray) 90%);
+ padding: 1rem;
+ overflow: hidden;
+}
+
+.main-component {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: 50px;
+ flex-grow: 1;
+}
+
+.passport {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.App {
+ text-align: center;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+ 
+.button {
+ background-color: var(--lavender-web);
+ border: none;
+ color: black;
+ height: 70px;
+ width: 70px;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+ font-size: 16px;
+ margin: 4px 2px;
+ cursor: pointer;
+ border-radius: 10px;
+}
+ 
+.calculator {
+ background-color: var(--taupe-gray);
+ border-radius: 5px;
+ margin: 0 auto;
+ padding: 20px 10px;
+}
+ 
+.display {
+ background-color: #fff;
+ border: 1px solid var(--silver);
+ border-radius: 5px;
+ margin: 0 auto;
+ padding: 10px;
+ text-align: right;
+ font-size: 2rem;
+}
+ 
+.buttonContainer {
+ border-radius: 5px;
+ text-align: center;
+ display: flex;
+ flex-direction: row;
+ gap: 10px;
+}
+ 
+.buttons {
+ border-radius: 5px;
+ text-align: center;
+ margin-top: 10px;
+}
+
+.Immutable-button{
+    background-color: var(--taupe-gray); 
+    padding: 10px 20px; 
+    border: none; 
+    cursor: pointer; 
+    border-radius: 5px;
+}
+
+.Immutable-button:hover{
+    background-color: #949698;
+}
+p {
+  max-height: 90vh;
+  overflow-y: auto;
+  max-width: 600px;
+  columns: 300px; 
+  column-gap: 40px;
+}
+
+.user-info-container {
+    background-color: #f5f5f5; 
+    padding: 10px; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    max-height: 90vh;
+    overflow-y: auto;
+    max-width: 600px;
+    columns: 300px; 
+    column-gap: 40px;
+    
+  }
+.user-info {
+    font-size: 12px;
+    margin: 10px 0;
+    color: #333;
+    font-weight: bold;
+  }
+
+html {
+  height: 100vh;
+  width: 100vw;
+  background:linear-gradient(45deg, var(--silver) 30%, var(--french-gray) 90%);
+  border: hidden;
+}
