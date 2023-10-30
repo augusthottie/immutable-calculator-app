@@ -5,8 +5,8 @@ const passportInstance = new passport.Passport({
     environment: config.Environment.SANDBOX,
   }),
   clientId: 'mzn2urjgOdniAVvYneYDC0jgh9lm3kFN',
-  redirectUri: 'http://localhost:3000/login',
-  logoutRedirectUri: 'http://localhost:3000',
+  redirectUri: 'https://immutable-calculator-app.netlify.app/login',
+  logoutRedirectUri: 'https://immutable-calculator-app.netlify.app',
   audience: 'platform_api',
   scope: 'openid offline_access email transact'
 });

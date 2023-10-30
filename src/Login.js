@@ -18,8 +18,8 @@ export default function Login() {
     console.log("I will login")
     handleLoginCallback()
   }, []);
-
   return (
-    <div/>
-  );
+    <div>...
+    </div>
+    )
 }

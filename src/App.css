@@ -98,7 +98,11 @@ p {
   columns: 300px; 
   column-gap: 40px;
 }
-
+.loading {
+  font-size: 14px;
+  color:black; 
+  
+}
 .user-info-container {
     background-color: #f5f5f5; 
     padding: 10px; 

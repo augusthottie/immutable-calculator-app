@@ -44,6 +44,7 @@
   },
   "devDependencies": {
     "@imtbl/sdk": "^0.28.0",
+    "@testing-library/dom": "^9.3.3",
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2"
   }
