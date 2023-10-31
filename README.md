@@ -254,6 +254,18 @@ So in summary, this is a React component that when clicked will call the Passpor
 In summary, when the button is clicked, this code uses the Passport Ethereum provider to have the user sign and submit a transaction containing the specified data to the blockchain. The transaction hash allows the application to track its status.
 So it enables sending a basic Ethereum transaction using a user's Passport wallet, abstracting away some of the underlying complexity. The key aspects are getting the provider, requesting accounts, and calling eth_sendTransaction.
 
+**Proof of Work 🎆**
+- **Logging in with passport**
+  ![image](https://github.com/AugustHottie/immutable-calculator-app/assets/96122635/cbc467b3-e334-4471-ac03-c92938871697)
+- **Initiating a transaction**
+  ![image](https://github.com/AugustHottie/immutable-calculator-app/assets/96122635/44c7dd21-6bea-4506-9992-4a4f9b654a6f)
+- **Confirming the transaction**
+  ![image](https://github.com/AugustHottie/immutable-calculator-app/assets/96122635/44fb5857-9d4c-43f2-aec3-d7aad2b9e24d)
+  ![image](https://github.com/AugustHottie/immutable-calculator-app/assets/96122635/c1b4442a-444c-4691-b834-bc52a220a388)
+
+
+
+
 ### **Final Thoughts 🤔**
 
 Congratulations! You've successfully integrated Immutable Passport into your React application. By following this guide, you've taken the first steps to leverage the power of Immutable's authentication and authorization services.
