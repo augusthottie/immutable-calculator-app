@@ -256,12 +256,12 @@ So it enables sending a basic Ethereum transaction using a user's Passport walle
 
 **Proof of Success 🎆**
 - **Logging in with passport**
-  ![image](https://github.com/AugustHottie/immutable-calculator-app/assets/96122635/cbc467b3-e334-4471-ac03-c92938871697)
+  ![image](https://github.com/AugustHottie/immutable-calculator-app/blob/main/images/image%20(2).png?raw=true)
 - **Initiating a transaction**
-  ![image](https://github.com/AugustHottie/immutable-calculator-app/assets/96122635/44c7dd21-6bea-4506-9992-4a4f9b654a6f)
+  ![image](https://github.com/AugustHottie/immutable-calculator-app/blob/main/images/image.png?raw=true)
 - **Confirming the transaction**
-  ![image](https://github.com/AugustHottie/immutable-calculator-app/assets/96122635/44fb5857-9d4c-43f2-aec3-d7aad2b9e24d)
-  ![image](https://github.com/AugustHottie/immutable-calculator-app/assets/96122635/c1b4442a-444c-4691-b834-bc52a220a388)
+  ![image](https://github.com/AugustHottie/immutable-calculator-app/blob/main/images/image.png?raw=true)
+  ![image](https://github.com/AugustHottie/immutable-calculator-app/blob/main/images/image%20(4).png?raw=true)
 
 
 
