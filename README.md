@@ -1,6 +1,6 @@
 # Immutable Passport Integration Guide
 
-This guide provides step-by-step instructions for integrating Immutable Passport into a simple React application. It covers the connection process and how to initialise a transaction.
+This guide provides step-by-step instructions for integrating Immutable Passport into a simple React application. It covers the connection process, getting user information, and how to initialise a transaction.
 ## Prerequisites
 
 Before you begin, make sure you have the following:
@@ -94,25 +94,25 @@ import passportInstance from "./baseConfig.js";
        onClick={async () => {
         setLoading(true);
          console.log("Hottie isn't too hot. She is ") //sanity check xD
-         const provider = passportInstance.connectEvm();
-         const accounts = await provider.request({ method: "eth_requestAccounts" });
+         const provider = passportInstance.connectEvm(); //connects to EVM 
+         const accounts = await provider.request({ method: "eth_requestAccounts" }); //logs in with your account, eg. gmail
          const personAddress = accounts[0] // ['0x...']
          setUserAddress(personAddress)
       
          const userInfo  = await passportInstance.getUserInfo()
-         const email = userInfo.email
+         const email = userInfo.email //gets your email
          setUserEmail(email)
 
          const nickname = userInfo.nickname
-         setUserNickname(nickname)
+         setUserNickname(nickname) //gets your nickname, the value will be undefined if you have no nickname
 
          const accessToken = await passportInstance.getAccessToken();
          const accessTokenValue = accessToken;
-         setAccessToken(accessTokenValue)
+         setAccessToken(accessTokenValue) //gets Access token
 
          const idToken  = await passportInstance.getIdToken();
          const idTokenValue = idToken;
-         setIdToken(idTokenValue)
+         setIdToken(idTokenValue) // gets ID token
 
          //sanity check
          console.log({email})
@@ -134,7 +134,7 @@ import passportInstance from "./baseConfig.js";
 - It calls setter functions like setUserEmail to save the profile data in the application state.
 - It calls passportInstance.getAccessToken() and passportInstance.getIdToken() to get JWT authentication tokens from Passport.
 - It saves the access and ID token values to variables and state.
-- It logs all the retrieved user data to the console for debugging/verification
+- It logs all the retrieved user data to the console for debugging/verification.
 
  We also need to create a file to handle our Login logic. To do this, create a file called `Login.js`. Copy the code below to handle the logic:
 ```js
@@ -180,7 +180,7 @@ Note, if you encounter any of the errors while trying to login in the Screenshot
 - run `npm install crypto-browserify`
 - run `npm install stream-browserify`
 - run `npm install buffer`
-- After install them individually, add them in `webpack.config.js` file inside `node-modules` in `react-scripts`
+- After installing them individually, add them in `webpack.config.js` file inside `node-modules` in `react-scripts`
 - look for the config folder, inside the folder is the `webpack.config.js` file. Then ctrl+f and search for `fallback`, then add this code:
 - ```js
   fallback:{
@@ -240,7 +240,7 @@ So in summary, this is a React component that when clicked will call the Passpor
    - Notice we had to create a new varaible `dataValue` and cast it as string using `web3.utils.asciiToHex(datavalue)`  we do this to avoid the `invalid BigNumber string` error. So it is very important you cast the return value of data using `web3.utils.asciiToHex()`.
    - Notice, we also didn't use `value` as its optional.
    - You can choose to use it, but you'll most likely have to cast its value to string as well.
-   - Another thing to note, make the address you're sending to is a valid immutable address and it has some test tokens, also the account you're sending from has test tokens too.
+   - Another thing to note, make sure the address you're sending to is a valid immutable address and it has some test tokens, also the account you're sending from has test tokens too.
   
    **Here's a brief overview of what the code does:**
 - The button onClick triggers an async function.
@@ -251,8 +251,19 @@ So in summary, this is a React component that when clicked will call the Passpor
 - The returned transaction hash is saved to a state variable.
 - This transaction hash is logged to console for debugging.
 
-In summary, when the button is clicked, this code uses the Passport Ethereum provider to have the user sign and submit a transaction containing the specified data to the blockchain. The transaction hash allows the application to track its status.
+In summary, when the button is clicked, the code uses the Passport Ethereum provider to have the user sign and submit a transaction containing the specified data to the blockchain. The transaction hash allows the application to track its status.
 So it enables sending a basic Ethereum transaction using a user's Passport wallet, abstracting away some of the underlying complexity. The key aspects are getting the provider, requesting accounts, and calling eth_sendTransaction.
+
+**Proof of Success 🎆**
+- **Logging in with passport**
+  ![image](https://github.com/AugustHottie/immutable-calculator-app/assets/96122635/cbc467b3-e334-4471-ac03-c92938871697)
+- **Initiating a transaction**
+  ![image](https://github.com/AugustHottie/immutable-calculator-app/assets/96122635/44c7dd21-6bea-4506-9992-4a4f9b654a6f)
+- **Confirming the transaction**
+  ![image](https://github.com/AugustHottie/immutable-calculator-app/assets/96122635/44fb5857-9d4c-43f2-aec3-d7aad2b9e24d)
+  ![image](https://github.com/AugustHottie/immutable-calculator-app/assets/96122635/c1b4442a-444c-4691-b834-bc52a220a388)
+
+
 
 ### **Final Thoughts 🤔**
 
