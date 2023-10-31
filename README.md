@@ -264,7 +264,7 @@ So it enables sending a basic Ethereum transaction using a user's Passport walle
   ![image](https://github.com/AugustHottie/immutable-calculator-app/blob/main/images/image%20(4).png?raw=true)
 
 Note, if you encounter the issue below while trying to initiate a transaction, it means the network server is down, you can try again after a while and it should work fine.
-![image](https://github.com/AugustHottie/immutable-calculator-app/assets/96122635/a5e9cb55-f11a-4d79-8222-a51ec43d2291)
+![image](https://github.com/AugustHottie/immutable-calculator-app/blob/main/images/image%20(5).png?raw=true)
 
 ### **Final Thoughts 🤔**
 
