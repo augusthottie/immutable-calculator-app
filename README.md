@@ -34,7 +34,7 @@ Before you begin, make sure you have the following:
    ```js
    npm install -D typescript ts-node
    ```
-4. **Initialse Passport:**
+4. **Initialise Passport:**
    Next, we'll need to initialise the Passport client. For us to initialise it, we'll need an instance of an ImmutableConfiguration, which defines shared configuration across all the Immutable modules, such as      the environment. Create a js file to save the below code. I named mine `baseConfig.js`. We'll be using the Sandbox environment instead of Production. Make sure to replace, `YOUR_CLIENT_ID`, `redirectUri`, and `logoutRedirectUri`, with the same values you used to register your App!
 - Example Code:
    ```js
@@ -190,7 +190,7 @@ Note, if you encounter any of the errors while trying to login in the Screenshot
   ```
 - Try logging in again, and you should be good to go!
 
-6. **Loging out a User:** Similar to the login code, we have to create a button with an `on-click` function to handle states. Here's the code to do so:
+6. **Logging out a User:** Similar to the login code, we have to create a button with an `on-click` function to handle states. Here's the code to do so:
 ```js
 <button className="Immutable-button" onClick={ async () => {
        await passportInstance.logout();
